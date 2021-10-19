@@ -16,6 +16,9 @@
 
 ## Updates
 
+***19/10/2021***
+The paper is accepted by Neurips'2021! The code will be released soon!
+  
 ***06/08/2021***
 The paper is post on arxiv! The code will be made public available once cleaned up.
 
