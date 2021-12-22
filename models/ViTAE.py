@@ -20,7 +20,7 @@ default_cfgs = {
     'ViTAE_basic_7': _cfg(),
 }
 
-
+#  The tiny model
 @register_model
 def ViTAE_basic_7(pretrained=False, **kwargs): # adopt performer for tokens to token
     model = ViTAE_ViT_basic(RC_tokens_type=['performer', 'performer', 'performer_less'], NC_tokens_type=['transformer', 'transformer', 'transformer'], stages=3, embed_dims=[64, 64, 128], token_dims=[64, 64, 256], 
@@ -31,6 +31,18 @@ def ViTAE_basic_7(pretrained=False, **kwargs): # adopt performer for tokens to t
             model, num_classes=model.num_classes, in_chans=kwargs.get('in_chans', 3))
     return model
 
+# The small model
+@register_model
+def ViTAE_basic_14(pretrained=False, **kwargs): # adopt performer for tokens to token
+    model = ViTAE_ViT_basic(RC_tokens_type=['performer', 'performer', 'performer_less'], NC_tokens_type=['transformer', 'transformer', 'transformer'], stages=3, embed_dims=[64, 64, 192], token_dims=[64, 64, 384], 
+                            downsample_ratios=[4, 2, 2], NC_depth=[0, 0, 14], NC_heads=[1, 1, 6], RC_heads=[1, 1, 1], mlp_ratio=3., NC_group=[1, 1, 96], RC_group=[1, 1, 1], **kwargs)
+    model.default_cfg = default_cfgs['ViTAE_basic_7']
+    if pretrained:
+        load_pretrained(
+            model, num_classes=model.num_classes, in_chans=kwargs.get('in_chans', 3))
+    return model
+
+# The 6M model
 @register_model
 def ViTAE_basic_10(pretrained=False, **kwargs): # adopt performer for tokens to token
     model = ViTAE_ViT_basic(RC_tokens_type=['performer', 'performer', 'performer_less'], NC_tokens_type=['transformer', 'transformer', 'transformer'], stages=3, embed_dims=[64, 64, 128], token_dims=[64, 64, 256], 
@@ -41,6 +53,7 @@ def ViTAE_basic_10(pretrained=False, **kwargs): # adopt performer for tokens to 
             model, num_classes=model.num_classes, in_chans=kwargs.get('in_chans', 3))
     return model
 
+# The 13M model
 @register_model
 def ViTAE_basic_11(pretrained=False, **kwargs): # adopt performer for tokens to token
     model = ViTAE_ViT_basic(RC_tokens_type=['performer', 'performer', 'performer_less'], NC_tokens_type=['transformer', 'transformer', 'transformer'], stages=3, embed_dims=[64, 64, 160], token_dims=[64, 64, 320], 
