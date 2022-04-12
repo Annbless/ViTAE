@@ -2,3 +2,15 @@
 </a> </h1> 
 
 The code and pretrained models have been transferred to [Link](https://github.com/ViTAE-Transformer/ViTAE-Transformer). Please try it and have fun!
+
+We have also provided the codes of using ViTAE for 
+
+> [Detection](https://github.com/ViTAE-Transformer/ViTAE-Transformer/tree/main/Object-Detection)
+
+> [Segmentation](https://github.com/ViTAE-Transformer/ViTAE-Transformer/tree/main/Semantic-Segmentation)
+
+> [Pose Estimation](https://github.com/ViTAE-Transformer/ViTAE-Transformer/tree/main/Animal-Pose-Estimation)
+
+> [Matting](https://github.com/ViTAE-Transformer/ViTAE-Transformer-Remote-Sensing)
+
+> [Remote Sensing](https://github.com/ViTAE-Transformer/ViTAE-Transformer-Matting)
