@@ -11,6 +11,6 @@ We have also provided the codes of using ViTAE for
 
 > [Pose Estimation](https://github.com/ViTAE-Transformer/ViTAE-Transformer/tree/main/Animal-Pose-Estimation)
 
-> [Matting](https://github.com/ViTAE-Transformer/ViTAE-Transformer-Remote-Sensing)
+> [Matting](https://github.com/ViTAE-Transformer/ViTAE-Transformer-Matting)
 
-> [Remote Sensing](https://github.com/ViTAE-Transformer/ViTAE-Transformer-Matting)
+> [Remote Sensing](https://github.com/ViTAE-Transformer/ViTAE-Transformer-Remote-Sensing)
